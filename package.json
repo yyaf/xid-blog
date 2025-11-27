@@ -46,6 +46,7 @@
     "remark-directive": "^4.0.0",
     "remark-math": "^6.0.0",
     "sanitize-html": "^2.17.0",
+    "sass": "^1.92.1",
     "satori": "^0.18.2",
     "satori-html": "^0.3.2",
     "tailwindcss": "^4.1.13",
