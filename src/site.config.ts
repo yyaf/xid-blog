@@ -2,16 +2,16 @@ import type { SiteConfig } from '~/types'
 
 const config: SiteConfig = {
   // Absolute URL to the root of your published site, used for generating links and sitemaps.
-  site: 'https://multiterm.stelclementine.com',
+  site: 'https://blog.xid.pp.ua/',
   // The name of your site, used in the title and for SEO.
-  title: 'MultiTerm',
+  title: 'XID',
   // The description of your site, used for SEO and RSS feed.
   description:
-    'A coder-ready Astro blog theme with 59 of your favorite color schemes to choose from',
+    '欢迎来到我的个人博客，这里记录我在前端、运维学习之路上的点滴探索。 内容涵盖前端开发、Python 脚本、GitHub 工作流、Linux等项目实践。 我相信持续学习与分享是成长的最佳方式，也希望这个博客能成为我日常的见证。',
   // The author of the site, used in the footer, SEO, and RSS feed.
-  author: 'Katy Kookaburra',
+  author: 'Xid',
   // Keywords for SEO, used in the meta tags.
-  tags: ['Astro', 'Terminal', 'Theme', 'MultiTerm', 'stelcodes'],
+  tags: ['前端', 'Linux', '运维', 'GitHub', 'Python'],
   // Path to the image used for generating social media previews.
   // Needs to be a square JPEG file due to limitations of the social card generator.
   // Try https://squoosh.app/ to easily convert images to JPEG.
@@ -42,7 +42,7 @@ const config: SiteConfig = {
     },
     {
       name: 'GitHub',
-      url: 'https://github.com/stelcodes/multiterm-astro',
+      url: 'https://github.com/yyaf',
       external: true,
     },
   ],
@@ -52,7 +52,7 @@ const config: SiteConfig = {
     mode: 'select',
     // The default theme identifier, used when themeMode is "select" or "light-dark-auto".
     // Make sure this is one of the themes listed in `themes` or "auto" for "light-dark-auto" mode.
-    default: 'catppuccin-mocha',
+    default: 'tokyo-night',
     // Shiki themes to bundle with the site.
     // https://expressive-code.com/guides/themes/#using-bundled-themes
     // These will be used to theme the entire site along with syntax highlighting.
@@ -151,12 +151,12 @@ const config: SiteConfig = {
   },
   // Social links to display in the footer.
   socialLinks: {
-    github: 'https://github.com/stelcodes/multiterm-astro',
-    mastodon: 'https://github.com/stelcodes/multiterm-astro',
-    email: 'https://github.com/stelcodes/multiterm-astro',
-    linkedin: 'https://github.com/stelcodes/multiterm-astro',
-    bluesky: 'https://github.com/stelcodes/multiterm-astro',
-    twitter: 'https://github.com/stelcodes/multiterm-astro',
+    github: 'https://github.com/yyaf',
+    mastodon: 'https://github.com/yyaf',
+    email: 'https://github.com/yyaf',
+    linkedin: 'https://github.com/yyaf',
+    bluesky: 'https://github.com/yyaf',
+    twitter: 'https://github.com/yyaf',
     rss: true, // Set to true to include an RSS feed link in the footer
   },
   // Configuration for Giscus comments.
@@ -165,22 +165,22 @@ const config: SiteConfig = {
   // Take the values from the generated script tag at https://giscus.app and fill them in here.
   // IMPORTANT: Update giscus.json in the root of the project with your own website URL
   // If you don't want to use Giscus, set this to undefined.
-  giscus: {
-    repo: 'stelcodes/multiterm-astro',
-    repoId: 'R_kgDOPNnBig',
-    category: 'Giscus',
-    categoryId: 'DIC_kwDOPNnBis4CteOc',
-    reactionsEnabled: true, // Enable reactions on post itself
-  },
+  // giscus: {
+  //   repo: 'stelcodes/multiterm-astro',
+  //   repoId: 'R_kgDOPNnBig',
+  //   category: 'Giscus',
+  //   categoryId: 'DIC_kwDOPNnBis4CteOc',
+  //   reactionsEnabled: true, // Enable reactions on post itself
+  // },
   // These are characters available for the character chat feature.
   // To add your own character, add an image file to the top-level `/public` directory
   // Make sure to compress the image to a web-friendly size (<100kb)
   // Try using the excellent https://squoosh.app web app for creating small webp files
-  characters: {
-    owl: '/owl.webp',
-    unicorn: '/unicorn.webp',
-    duck: '/duck.webp',
-  },
+  // characters: {
+  //   owl: '/owl.webp',
+  //   unicorn: '/unicorn.webp',
+  //   duck: '/duck.webp',
+  // },
 }
 
 export default config
