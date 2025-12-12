@@ -34,6 +34,18 @@ cat /etc/rocky-release  # 应显示 Rocky Linux release 10.1
 sudo dnf repolist       # 确认仅启用 baseos、appstream 等核心仓库
 ```
 
+查看当前主机名：
+
+```bash
+hostnamectl
+```
+
+设置新的主机名（比如改成 my-server）：
+
+```bash
+sudo hostnamectl set-hostname my-server
+```
+
 **理由**：Rocky 10 引入了新仓库结构（如 crb 取代 powertools）。确保从最新版本开始，避免旧镜像的已知漏洞。最小化安装减少不必要包（默认无 firewalld），降低攻击面 20-30%。如果不是 10.1，立即升级镜像。
 
 ### 1. 系统全量更新（优化为自动更新 + 内核检查）
