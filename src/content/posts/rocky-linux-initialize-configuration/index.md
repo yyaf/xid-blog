@@ -53,12 +53,11 @@ sudo hostnamectl set-hostname my-server
 ```bash
 sudo dnf upgrade -y  # 使用 upgrade 而非 update，更彻底
 sudo dnf install -y kernel-modules-extra  # Install the missing kernel modules
+sudo reboot # 内核更新需要重启
 sudo modprobe xt_addrtype  # Load the required module
 sudo dnf install dnf-automatic -y
 sudo systemctl enable --now dnf-automatic-install.timer
 ```
-
-如果内核更新，重启：`sudo reboot`。
 
 **理由**：原始清单仅手动更新，但生产服务器需自动化以防零日漏洞（2025 年 CVE 数量已超 25,000）。`dnf-automatic` 每天检查并安装安全更新，减少人为遗忘。升级内核可修复如 Intel Downfall 的硬件漏洞。为什么不立即重启？避免中断后续配置。
 
