@@ -52,6 +52,8 @@ sudo hostnamectl set-hostname my-server
 
 ```bash
 sudo dnf upgrade -y  # 使用 upgrade 而非 update，更彻底
+sudo dnf install -y kernel-modules-extra  # Install the missing kernel modules
+sudo modprobe xt_addrtype  # Load the required module
 sudo dnf install dnf-automatic -y
 sudo systemctl enable --now dnf-automatic-install.timer
 ```
