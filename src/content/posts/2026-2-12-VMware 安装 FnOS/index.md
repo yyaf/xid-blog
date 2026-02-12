@@ -9,10 +9,6 @@ coverImage:
   alt: 'vmware 安装 FnOS 后的后台界面。'
 ---
 
-# VMware 安装飞牛 fnOS 并配置静态 IP 教程
-
----
-
 ## 一、准备工作 📦
 
 - **下载 fnOS 镜像**：访问官网 https://fnnas.com/download，下载最新版 ISO 镜像，保存到**非中文路径**。
