@@ -1,7 +1,13 @@
 ---
-import Layout from '~/layouts/Layout.astro'
+import PageLayout from "@/layouts/Base.astro";
+
+const meta = {
+	description: "Oops! It looks like this page is lost in space!",
+	title: "Oops! You found a missing page!",
+};
 ---
 
-<Layout>
-  <h1 class="inline-block m-auto p-4 text-accent text-4xl">404</h1>
-</Layout>
+<PageLayout meta={meta}>
+	<h1 class="title mb-12">404 | Oops something went wrong</h1>
+	<p class="mb-8">Please use the navigation to find your way back</p>
+</PageLayout>
