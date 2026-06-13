@@ -83,12 +83,9 @@ import { siteConfig } from "../../site.config";
 </header>
 
 <style>
-	/* 白天模式下将白色 logo 反黑 */
-	.header-logo {
-		filter: invert(1);
-	}
+	/* 暗色模式下将黑色 logo 反白 */
 	[data-theme='dark'] .header-logo {
-		filter: none;
+		filter: invert(1);
 	}
 </style>
 
