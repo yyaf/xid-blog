@@ -45,6 +45,10 @@ export const menuLinks: { path: string; title: string }[] = [
 		title: "博客",
 	},
 	{
+		path: "/notes/",
+		title: "笔记",
+	},
+	{
 		path: "https://github.com/yyaf",
 		title: "GitHub",
 	},
