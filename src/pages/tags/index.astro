@@ -6,13 +6,13 @@ const allPosts = await getAllPosts();
 const allTags = getUniqueTagsWithCount(allPosts);
 
 const meta = {
-	description: "A list of all the topics I've written about in my posts",
-	title: "All Tags",
+	description: "博客中所有文章标签的列表",
+	title: "所有标签",
 };
 ---
 
 <PageLayout meta={meta}>
-	<h1 class="title mb-6">Tags</h1>
+	<h1 class="title mb-6">标签</h1>
 	<ul class="space-y-4">
 		{
 			allTags.map(([tag, val]) => (
@@ -20,12 +20,12 @@ const meta = {
 					<a
 						class="cactus-link inline-block"
 						href={`/tags/${tag}/`}
-						title={`View posts with the tag: ${tag}`}
+						title={`查看标签： ${tag}`}
 					>
 						&#35;{tag}
 					</a>
 					<span class="inline-block">
-						- {val} Post{val > 1 && "s"}
+						- {val} 篇文章
 					</span>
 				</li>
 			))

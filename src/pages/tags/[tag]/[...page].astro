@@ -31,20 +31,20 @@ const tagMeta = await getTagMeta(tag);
 const TagContent = tagMeta ? (await render(tagMeta)).Content : null;
 
 const meta = {
-	description: tagMeta?.data.description ?? `View all posts with the tag - ${tag}`,
-	title: tagMeta?.data.title ?? `Posts about ${tag}`,
+	description: tagMeta?.data.description ?? `查看标签： ${tag}`,
+	title: tagMeta?.data.title ?? `标签：${tag}`,
 };
 
 const paginationProps = {
 	...(page.url.prev && {
 		prevUrl: {
-			text: "← Previous Tags",
+			text: "← 上一页",
 			url: page.url.prev,
 		},
 	}),
 	...(page.url.next && {
 		nextUrl: {
-			text: "Next Tags →",
+			text: "下一页 →",
 			url: page.url.next,
 		},
 	}),
@@ -55,13 +55,13 @@ const paginationProps = {
 	<nav class="mb-8" aria-label="Breadcrumbs">
 		<ul class="flex items-center">
 			<li class="flex items-center">
-				<a class="text-accent" href="/tags/">Tags</a>
+				<a class="text-accent" href="/tags/">标签</a>
 				<Icon aria-hidden="true" name="mdi:chevron-right" class="mx-1.5" />
 			</li>
 			<li aria-current="page" class=""><span aria-hidden="true">#</span>{tag}</li>
 		</ul>
 	</nav>
-	<h1 class="title capitalize">{tagMeta?.data.title ?? `Posts about ${tag}`}</h1>
+	<h1 class="title capitalize">{tagMeta?.data.title ?? `标签：${tag}`}</h1>
 	<div class="prose prose-sm prose-cactus mb-16 max-w-none">
 		{tagMeta?.data.description && <p>{tagMeta.data.description}</p>}
 		{TagContent && <TagContent />}

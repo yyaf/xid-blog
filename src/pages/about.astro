@@ -2,35 +2,40 @@
 import PageLayout from "@/layouts/Base.astro";
 
 const meta = {
-	description: "I'm a starter theme for Astro.build",
-	title: "About",
+	description: "关于 XID 的个人博客",
+	title: "关于",
 };
 ---
 
 <PageLayout meta={meta}>
-	<h1 class="title mb-12">About</h1>
+	<h1 class="title mb-12">关于</h1>
 	<div class="prose prose-sm prose-cactus max-w-none">
 		<p>
-			Hi, I’m a starter Astro. I’m particularly great for getting you started with your own blogging
-			website.
+			你好，我是 XID，一名前端开发与运维爱好者。
 		</p>
-		<p>Here are my some of my awesome built in features:</p>
+		<p>这个博客是我学习和记录的地方，主要关注以下方向：</p>
 		<ul class="list-inside list-disc" role="list">
-			<li>I'm ultra fast as I'm a static site</li>
-			<li>I'm fully responsive</li>
-			<li>I come with a light and dark mode</li>
-			<li>I'm easy to customise and add additional content</li>
-			<li>I have Tailwind CSS styling</li>
-			<li>Shiki code syntax highlighting</li>
-			<li>Satori for auto generating OG images for blog posts</li>
+			<li>前端开发技术与实践</li>
+			<li>Linux 服务器运维</li>
+			<li>NAS 与家庭网络</li>
+			<li>开发工具与环境配置</li>
+		</ul>
+		<p>博客主要特性：</p>
+		<ul class="list-inside list-disc" role="list">
+			<li>基于 Astro 构建，静态站点，加载超快</li>
+			<li>全响应式设计，适配各种设备</li>
+			<li>支持亮色 / 深色模式切换</li>
+			<li>代码语法高亮（Expressive Code）</li>
+			<li>自动生成 OG 社交分享图片</li>
+			<li>全文搜索（Pagefind）</li>
 		</ul>
 		<p>
-			Clone or fork my <a
+			欢迎通过 <a
 				class="cactus-link inline-block"
-				href="https://github.com/chrismwilliams/astro-cactus"
+				href="https://github.com/yyaf"
 				rel="noreferrer"
-				target="_blank">repo</a
-			> if you like me!
+				target="_blank">GitHub</a
+			> 关注我，或订阅 <a class="cactus-link inline-block" href="/rss.xml">RSS</a> 获取最新文章。
 		</p>
 	</div>
 </PageLayout>

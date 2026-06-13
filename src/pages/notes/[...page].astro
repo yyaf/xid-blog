@@ -21,20 +21,20 @@ interface Props {
 const { page } = Astro.props;
 
 const meta = {
-	description: "Read my collection of notes",
-	title: "Notes",
+	description: "浏览我的笔记合集",
+	title: "笔记",
 };
 
 const paginationProps = {
 	...(page.url.prev && {
 		prevUrl: {
-			text: "← Previous Page",
+			text: "← 上一页",
 			url: page.url.prev,
 		},
 	}),
 	...(page.url.next && {
 		nextUrl: {
-			text: "Next Page →",
+			text: "下一页 →",
 			url: page.url.next,
 		},
 	}),
@@ -43,9 +43,9 @@ const paginationProps = {
 
 <PageLayout meta={meta}>
 	<section>
-		<h1 class="title mb-12 flex items-center gap-3">
-			Notes <a class="text-accent" href="/notes/rss.xml" target="_blank">
-				<span class="sr-only">RSS feed</span>
+		<h1 class="title mb-12 flex items-center gap-3"> 
+			笔记 <a class="text-accent" href="/notes/rss.xml" target="_blank">
+				<span class="sr-only">RSS 订阅</span>
 				<Icon aria-hidden="true" class="h-6 w-6" focusable="false" name="mdi:rss" />
 			</a>
 		</h1>

@@ -6,7 +6,7 @@ export function getFormattedDate(
 	options?: Intl.DateTimeFormatOptions,
 ): string {
 	if (date === undefined) {
-		return "Invalid Date";
+		return "无效日期";
 	}
 
 	return new Intl.DateTimeFormat(siteConfig.date.locale, {

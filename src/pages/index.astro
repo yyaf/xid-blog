@@ -7,13 +7,13 @@ import { getAllPosts } from "@/data/post";
 import PageLayout from "@/layouts/Base.astro";
 import { collectionDateSort } from "@/utils/date";
 
-// Posts
+// 文章
 const MAX_POSTS = 10;
 const allPosts = await getAllPosts();
 const allPostsByDate = allPosts.sort(collectionDateSort) as CollectionEntry<"post">[];
 const latestPosts = allPostsByDate.slice(0, MAX_POSTS);
 
-// Pinned Posts, set to a max of 3;
+// 置顶文章，最多 3 篇
 const MAX_PINNED_POSTS = 3;
 const pinnedPosts = allPostsByDate
 	.values()
@@ -21,7 +21,7 @@ const pinnedPosts = allPostsByDate
 	.take(MAX_PINNED_POSTS)
 	.toArray();
 
-// Notes, set to a max of 5
+// 笔记，最多 5 篇
 const MAX_NOTES = 5;
 const allNotes = await getCollection("note");
 const latestNotes = allNotes
@@ -29,20 +29,18 @@ const latestNotes = allNotes
 	.slice(0, MAX_NOTES) as CollectionEntry<"note">[];
 ---
 
-<PageLayout meta={{ title: "Home" }}>
+<PageLayout meta={{ title: "首页" }}>
 	<section>
-		<h1 class="title mb-12">Hello World!</h1>
+		<h1 class="title mb-12">Hi，我是 XID 👋</h1>
 		<p class="mb-4">
-			Hi, I’m a theme for Astro, a simple starter that you can use to create your website or blog.
-			If you want to know more about how you can customise me, add more posts, and make it your own,
-			click on the GitHub icon link below and it will take you to my repo.
+			欢迎来到我的个人博客，这里记录我在前端开发与运维学习之路上的点滴探索。
 		</p>
 		<SocialList />
 	</section>
 	{
 		pinnedPosts.length > 0 && (
 			<section class="mt-16">
-				<h2 class="title mb-6 text-xl">Pinned Posts</h2>
+				<h2 class="title mb-6 text-xl">置顶文章</h2>
 				<ul class="space-y-4" role="list">
 					{pinnedPosts.map((p) => (
 						<li class="grid gap-1 sm:grid-cols-[auto_1fr]">
@@ -54,7 +52,7 @@ const latestNotes = allNotes
 		)
 	}
 	<section class="mt-16">
-		<h2 class="title text-accent mb-6 text-xl"><a href="/posts/">Posts</a></h2>
+		<h2 class="title text-accent mb-6 text-xl"><a href="/posts/">文章</a></h2>
 		<ul class="space-y-4" role="list">
 			{
 				latestPosts.map((p) => (
@@ -69,7 +67,7 @@ const latestNotes = allNotes
 		latestNotes.length > 0 && (
 			<section class="mt-16">
 				<h2 class="title text-accent mb-6 text-xl">
-					<a href="/notes/">Notes</a>
+					<a href="/notes/">笔记</a>
 				</h2>
 				<ul class="space-y-6" role="list">
 					{latestNotes.map((note) => (

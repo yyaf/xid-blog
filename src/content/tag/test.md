@@ -1,15 +1,15 @@
 ---
-title: Test Tag
-description: This tag is used for testing various features of the theme.
+title: 测试标签
+description: 此标签用于测试主题的各种功能。
 ---
 
-This is an example of a custom intro on a tag page. Its markdown can be found in `src/content/tag/test.md`.
+这是一个标签页面上的自定义介绍示例。其 Markdown 内容位于 `src/content/tag/test.md`。
 
-This collection includes posts that demonstrate and test different features of the Astro Theme Cactus, including:
+该合集包含演示和测试 Astro Theme Cactus 不同功能的文章，包括：
 
-- Markdown rendering capabilities
-- Image handling and optimization
-- Table of contents generation
-- Various edge cases and scenarios
+- Markdown 渲染能力
+- 图片处理与优化
+- 目录生成
+- 各种边界情况和场景
 
-Feel free to explore these posts to understand how the theme handles different content types and configurations.
+欢迎浏览这些文章，了解主题如何处理不同的内容类型和配置。
