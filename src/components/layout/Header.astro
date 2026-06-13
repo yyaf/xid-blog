@@ -12,13 +12,8 @@ import { siteConfig } from "../../site.config";
 			class="inline-flex items-center sm:relative sm:inline-block"
 			href="/"
 		>
-				<img
-					alt="XID 博客 Logo"
-					class="header-logo me-3 h-10 w-10 sm:absolute sm:-start-[4.5rem] sm:me-0 sm:h-14 sm:w-14"
-					height="512"
-					src="/icon.svg"
-					width="512"
-				/>
+			<img alt="XID 博客 Logo" class="header-logo-light me-3 h-10 w-10 sm:absolute sm:-start-[4.5rem] sm:me-0 sm:h-14 sm:w-14" height="512" src="/icon.svg" width="512" />
+				<img alt="XID 博客 Logo" class="header-logo-dark me-3 h-10 w-10 sm:absolute sm:-start-[4.5rem] sm:me-0 sm:h-14 sm:w-14" height="512" src="/icon-w.svg" width="512" />
 			<span class="text-xl font-bold sm:text-2xl">{siteConfig.title}</span>
 		</a>
 		<nav
@@ -83,10 +78,10 @@ import { siteConfig } from "../../site.config";
 </header>
 
 <style>
-	/* 暗色模式下将黑色 logo 反白 */
-	[data-theme='dark'] .header-logo {
-		filter: invert(1);
-	}
+	/* 白天显示黑色图标，暗色模式显示白色图标 */
+	.header-logo-dark { display: none; }
+	[data-theme='dark'] .header-logo-light { display: none; }
+	[data-theme='dark'] .header-logo-dark { display: inline; }
 </style>
 
 <script>
