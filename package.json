@@ -3,6 +3,7 @@
 	"type": "module",
 	"version": "1.0.0",
 	"private": true,
+		"packageManager": "pnpm@11.6.0",
 		"description": "XID的个人博客 — 记录前端、运维学习之路上的点滴探索。",
 	"scripts": {
 		"postinstall": "pnpm rebuild sharp",
